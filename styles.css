@@ -1,0 +1,87 @@
+:root {
+  color-scheme: dark;
+  --bg: #081018;
+  --panel: #102432;
+  --line: #2f5368;
+  --text: #ecf7ff;
+  --accent: #47e57b;
+  --food: #ff8c42;
+  --danger: #ff5d73;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Cairo", "Tahoma", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #133147, var(--bg));
+  color: var(--text);
+}
+
+.game-wrapper {
+  width: min(94vw, 520px);
+  background: color-mix(in srgb, var(--panel) 88%, black);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 20px 35px rgb(0 0 0 / 35%);
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.instructions {
+  margin: 0 0 1rem;
+  text-align: center;
+  color: #c6deec;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+  font-weight: 700;
+}
+
+canvas {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  background: linear-gradient(135deg, #0a1a27, #0d2232);
+}
+
+.controls {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--accent);
+  color: #05220f;
+}
+
+#status {
+  margin: 0;
+  text-align: center;
+  color: #bfdae8;
+}
+
+#status.danger {
+  color: var(--danger);
+  font-weight: 700;
+}
